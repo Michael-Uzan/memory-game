@@ -1,6 +1,6 @@
 'use strict'
 
-let selectedCardsId = [];
+let selectedCardsIdx = [];
 const delayCloseCards = 700;
 
 function onInit() {
@@ -11,23 +11,27 @@ function onInit() {
 function renderBoard() {
     const board = getBoard()
     let strHTML = ''
-    board.forEach((card) => {
+    board.forEach((card, cardIdx) => {
         strHTML += card.isShowen ?
             `<div class="card"><img src=${card.imgUrl}></div>\n` :
-            `<div class="card pointer" onclick="onCardClick('${card._id}')" ></div>\n`
+            `<div class="card pointer" onclick="onCardClick('${card._id}' , '${cardIdx}')" ></div>\n`
     });
     document.querySelector('.board-container').innerHTML = strHTML;
 
 }
 
-function onCardClick(cardId) {
-    selectedCardsId.push(cardId)
+function onCardClick(cardId, cardIdx) {
+    selectedCardsIdx.push(cardIdx)
     showCard(cardId)
     renderBoard()
-    if (selectedCardsId.length === 2) {
-        checkMatch(selectedCardsId)
-        selectedCardsId = []
-        renderBoardTimeout()
+    if (selectedCardsIdx.length === 2) {
+        if (!checkMatch(selectedCardsIdx)) {
+            closeShowenCards(selectedCardsIdx)
+            renderBoardTimeout()
+        } else if (checkVictory()) {
+            console.log('Victory!!!')
+        }
+        selectedCardsIdx = []
     }
 }
 

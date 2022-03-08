@@ -15,11 +15,17 @@ function showCard(cardId) {
     board[cardIdx].isShowen = true
 }
 
-function checkMatch(selectedCardsId) {
-    const cardIdx1 = board.findIndex(card => card._id === selectedCardsId[0])
-    const cardIdx2 = board.findIndex(card => card._id === selectedCardsId[1])
-    if (board[cardIdx1].matchNumber !== board[cardIdx2].matchNumber) {
-        board[cardIdx1].isShowen = false
-        board[cardIdx2].isShowen = false
-    }
+function checkMatch(selectedCardsIdx) {
+    return board[selectedCardsIdx[0]].matchNumber === board[selectedCardsIdx[1]].matchNumber
 }
+
+function closeShowenCards(selectedCardsIdx) {
+    selectedCardsIdx.forEach((cardIdx) => {
+        board[cardIdx].isShowen = false
+    })
+}
+
+function checkVictory() {
+    return board.every((card) => card.isShowen === true)
+}
+
