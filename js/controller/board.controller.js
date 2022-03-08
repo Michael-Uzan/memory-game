@@ -12,8 +12,14 @@ function renderBoard() {
     board.forEach((card) => {
         strHTML += card.isShowen ?
             `<div class="card"><img src=${card.imgUrl}></div>\n` :
-            `<div class="card"></div>\n`
+            `<div class="card" onclick="onCardClick('${card._id}')" ></div>\n`
     });
     document.querySelector('.board-container').innerHTML = strHTML;
 
+}
+
+function onCardClick(cardId) {
+    console.log('hello', cardId)
+    showCard(cardId)
+    renderBoard()
 }

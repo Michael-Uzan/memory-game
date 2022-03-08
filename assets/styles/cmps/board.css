@@ -5,6 +5,10 @@
     grid-template-rows: 100px 100px;
 }
 
+.board-container .card {
+    border: 2px solid grey;
+}
+
 .board-container .card img {
     object-fit: fill;
 }
