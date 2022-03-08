@@ -1,0 +1,22 @@
+:root {
+    /* BREAKPOINTS: */
+    --mobile-breakpoint: 440px;
+    --narrow-breakpoint: 720px;
+    --normal-breakpoint: 960px;
+
+    /* COLORS */
+    --bgcColor: #ebecf0;
+    --fontColor: #20242b;
+
+    --clr1: #fb275d;
+    --clr2: #ffcc00;
+    --clr3: #01ca72;
+    --clr4: #7357d4;
+    --clr5: #2b2c5d;
+    --clr6: #419fff;
+    --clr7: #4eccc6;
+    --clr8: #68a1bd;
+    --clr9: #ff2d8a;
+    --clr10: #c13b54;
+    --clr11: #ffaa2b;
+}
