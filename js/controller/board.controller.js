@@ -1,7 +1,9 @@
 'use strict'
 
+let selectedCardsId = [];
+const delayCloseCards = 700;
+
 function onInit() {
-    console.log('init')
     generateBoard(4)
     renderBoard()
 }
@@ -12,14 +14,23 @@ function renderBoard() {
     board.forEach((card) => {
         strHTML += card.isShowen ?
             `<div class="card"><img src=${card.imgUrl}></div>\n` :
-            `<div class="card" onclick="onCardClick('${card._id}')" ></div>\n`
+            `<div class="card pointer" onclick="onCardClick('${card._id}')" ></div>\n`
     });
     document.querySelector('.board-container').innerHTML = strHTML;
 
 }
 
 function onCardClick(cardId) {
-    console.log('hello', cardId)
+    selectedCardsId.push(cardId)
     showCard(cardId)
     renderBoard()
+    if (selectedCardsId.length === 2) {
+        checkMatch(selectedCardsId)
+        selectedCardsId = []
+        renderBoardTimeout()
+    }
+}
+
+function renderBoardTimeout() {
+    setTimeout(() => renderBoard(), delayCloseCards)
 }
