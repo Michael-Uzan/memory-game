@@ -1,6 +1,6 @@
 .modal .close-modal {
     position: relative;
-    left: 80px;
+    left: 70px;
     bottom: 30px;
     background-color: var(--bgcColor);
     border: 2px solid var(--clr2);
