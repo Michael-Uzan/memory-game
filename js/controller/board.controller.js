@@ -1,7 +1,7 @@
 'use strict'
 
-let selectedCardsIdx = [];
-const delayCloseCards = 700;
+let gSelectedCardsIdx = [];
+const gDelayCloseCards = 700;
 
 function onInit() {
     generateBoard(4)
@@ -21,20 +21,20 @@ function renderBoard() {
 }
 
 function onCardClick(cardId, cardIdx) {
-    selectedCardsIdx.push(cardIdx)
+    gSelectedCardsIdx.push(cardIdx)
     showCard(cardId)
     renderBoard()
-    if (selectedCardsIdx.length === 2) {
-        if (!checkMatch(selectedCardsIdx)) {
-            closeShowenCards(selectedCardsIdx)
+    if (gSelectedCardsIdx.length === 2) {
+        if (!checkMatch(gSelectedCardsIdx)) {
+            closeShowenCards(gSelectedCardsIdx)
             renderBoardTimeout()
         } else if (checkVictory()) {
             console.log('Victory!!!')
         }
-        selectedCardsIdx = []
+        gSelectedCardsIdx = []
     }
 }
 
 function renderBoardTimeout() {
-    setTimeout(() => renderBoard(), delayCloseCards)
+    setTimeout(() => renderBoard(), gDelayCloseCards)
 }
