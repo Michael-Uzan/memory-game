@@ -1,3 +1,5 @@
+'use strict'
+
 let gElBody = document.querySelector('body')
 
 function toggleModal(title = false) {

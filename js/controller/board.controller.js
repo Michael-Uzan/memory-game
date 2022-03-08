@@ -1,8 +1,8 @@
 'use strict'
 
 let gSelectedCardsIdx = [];
-let gBoardSize = 4;
-const gDelayCloseCards = 700;
+let gBoardSize = 16;
+const gDelayCloseCards = 400;
 
 
 function onInit() {
