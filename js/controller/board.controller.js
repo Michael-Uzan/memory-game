@@ -1,10 +1,12 @@
 'use strict'
 
 let gSelectedCardsIdx = [];
+let gBoardSize = 4;
 const gDelayCloseCards = 700;
 
+
 function onInit() {
-    generateBoard(4)
+    generateBoard(gBoardSize)
     renderBoard()
 }
 
@@ -29,7 +31,7 @@ function onCardClick(cardId, cardIdx) {
             closeShowenCards(gSelectedCardsIdx)
             renderBoardTimeout()
         } else if (checkVictory()) {
-            console.log('Victory!!!')
+            toggleModal('Victory!!!')
         }
         gSelectedCardsIdx = []
     }
@@ -37,4 +39,10 @@ function onCardClick(cardId, cardIdx) {
 
 function renderBoardTimeout() {
     setTimeout(() => renderBoard(), gDelayCloseCards)
+}
+
+function onRestartGame() {
+    toggleModal()
+    generateBoard(gBoardSize)
+    renderBoard()
 }

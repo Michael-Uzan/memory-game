@@ -1,8 +1,9 @@
 'use strict'
 
-let board = boardData;
+let board;
 
 function generateBoard(size) {
+    board = JSON.parse(JSON.stringify(boardData));
     board = shuffle(board.slice(0, size))
 }
 

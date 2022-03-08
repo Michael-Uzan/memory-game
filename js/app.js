@@ -1,8 +1,10 @@
-let gBody = document.querySelector('body')
-console.log(gBody)
+let gElBody = document.querySelector('body')
 
-function toggleModal() {
-    gBody.classList.toggle('modal-open')
+function toggleModal(title = false) {
+    gElBody.classList.toggle('modal-open')
+    const elTitle = document.querySelector('.modal-title');
+    console.log(elTitle)
+    if (title) elTitle.innerText = title
 }
 
-// toggleModal()
+
