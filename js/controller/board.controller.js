@@ -4,11 +4,6 @@ let gSelectedCardsIdx = [];
 const gDelayCloseCards = 400;
 
 
-function onInit() {
-    generateBoard(gameSettingsData.boardSize)
-    renderBoard()
-}
-
 function renderBoard() {
     const board = getBoard()
     let strHTML = ''
@@ -22,9 +17,9 @@ function renderBoard() {
 }
 
 function onCardClick(cardId, cardIdx) {
-    if (!gameSettingsData.isStarted) {
+    if (!game.isStarted) {
         startTimer()
-        gameSettingsData.isStarted = true
+        game.isStarted = true
     }
 
     gSelectedCardsIdx.push(cardIdx)
@@ -48,6 +43,6 @@ function renderBoardTimeout() {
 
 function onRestartGame() {
     toggleModal()
-    generateBoard(gameSettingsData.boardSize)
+    restartGame()
     renderBoard()
 }

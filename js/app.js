@@ -1,5 +1,9 @@
 'use strict'
 
+function onInit() {
+    restartGame()
+    renderBoard()
+}
 
 function toggleModal(title = false) {
     let elBody = document.querySelector('body')

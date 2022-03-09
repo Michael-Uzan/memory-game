@@ -19,7 +19,6 @@ function startTimer() {
 
 function stopTimer() {
     clearInterval(gIntervalId)
-    // this.countdown = 0
 }
 
 
@@ -31,9 +30,8 @@ function renderTime(timeLeft) {
     if (second < 10) second = `0${second}`
     let timeToDisplay = 'Time left: ' + minute + ':' + second
     elTimeLeft.innerText = timeToDisplay
-    // return minute + ':' + second
 }
 
 
-elMoves.innerText = `Moves: ${gameSettingsData.moves} `
-elBoardSize.innerText = `Size: ${gameSettingsData.boardSize} cards`
+elMoves.innerText = `Moves: ${game.moves} `
+elBoardSize.innerText = `Size: ${game.boardSize} cards`

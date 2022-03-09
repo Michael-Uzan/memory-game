@@ -1,31 +1,56 @@
 'use strict'
 
-function getNewTime() {
-    gameSettingsData.timeLeft--
-    return gameSettingsData.timeLeft
+let game = JSON.parse(JSON.stringify(gameData));
+
+// INIT / RESTART GAME
+
+function restartGame() {
+    generateBoard()
+    game.isStarted = false
+    game.timeLeft = game.totalTime
+    game.moves = 0
 }
 
-// let gIntervalId;
+// BOARD //
 
-// function startTimer() {
-//     gIntervalId = setInterval(() => {
-//         gameSettingsData.timeLeft--
-//         console.log(gameSettingsData.timeLeft)
-//     }, 1000)
-// }
+function generateBoard() {
+    game.board = JSON.parse(JSON.stringify(boardData));
+    game.board = shuffle(game.board.slice(0, game.boardSize))
+}
 
-// function stopTimer() {
-//     clearInterval(gIntervalId)
-//     // this.countdown = 0
-// }
+function getBoard() {
+    return game.board
+}
 
-// startTimer()
+function showCard(cardId) {
+    const cardIdx = game.board.findIndex(card => card._id === cardId)
+    game.board[cardIdx].isShowen = true
+}
 
-// get countdownDisplay(): string {
-//     if (!this.countdown) this.stopTimer()
-//     let minute: string | number = (Math.floor(this.countdown / 60))
-//     if (minute < 10) minute = `0${minute}`
-//     let second: string | number = (this.countdown % 60)
-//     if (second < 10) second = `0${second}`
-//     return minute + ':' + second
-//   }
+
+function closeShowenCards(selectedCardsIdx) {
+    selectedCardsIdx.forEach((cardIdx) => {
+        game.board[cardIdx].isShowen = false
+    })
+}
+
+// GAME CONTROLS
+
+function checkMatch(selectedCardsIdx) {
+    return game.board[selectedCardsIdx[0]].matchNumber === game.board[selectedCardsIdx[1]].matchNumber
+}
+
+function checkVictory() {
+    return game.board.every((card) => card.isShowen === true)
+}
+
+// TIMER
+
+function getNewTime() {
+    game.timeLeft--
+    return game.timeLeft
+}
+
+
+
+
