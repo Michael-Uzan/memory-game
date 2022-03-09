@@ -20,11 +20,24 @@
         </ul>
     </header>
 
-    <aside class="settings">
-        <ul class="clean-list">
-            <li>Time</li>
-            <li>Size</li>
-            <li>Close Cards</li>
+    <aside class="settings tac">
+        <h1>Game settings</h1>
+        <ul class="settings-bar clean-list">
+            <li>
+                <h3>Time</h3>
+                <h5>00:30</h5>
+                <input type="range" min="10" max="120" value="60" step="5">
+            </li>
+            <li>
+                <h3>Size</h3>
+                <h5>12 Cards</h5>
+                <input type="range" min="10" max="120" value="60" step="5">
+            </li>
+            <li>
+                <h3>Close cards timeout</h3>
+                <h5>Slow</h5>
+                <input type="range" min="10" max="120" value="60" step="5">
+            </li>
         </ul>
     </aside>
     <div class="settings-screen" onclick="onToggleSettings()"></div>
