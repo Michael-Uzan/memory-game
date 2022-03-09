@@ -27,6 +27,14 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min; //including minimum
 }
 
+function getTimeDisplay(timeSec) {
+    let minute = (Math.floor(timeSec / 60))
+    if (minute < 10) minute = `0${minute}`
+    let second = (timeSec % 60)
+    if (second < 10) second = `0${second}`
+    return (minute + ':' + second)
+}
+
 // function makeLorem(size = 100) {
 //     var words = ['The sky', 'above', 'the port', 'was', 'the color of television', 'tuned', 'to', 'a dead channel', '.', 'All', 'this happened', 'more or less', '.', 'I', 'had', 'the story', 'bit by bit', 'from various people', 'and', 'as generally', 'happens', 'in such cases', 'each time', 'it', 'was', 'a different story', '.', 'It', 'was', 'a pleasure', 'to', 'burn'];
 //     var txt = '';

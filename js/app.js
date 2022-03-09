@@ -6,6 +6,7 @@ function onInit() {
     restartGame()
     renderBoard()
     renderStatus()
+    renderSettings()
 }
 
 function toggleModal(title = false) {

@@ -2,9 +2,9 @@
 
 let gIntervalId;
 
-const elTimeLeft = document.querySelector('.time-left')
-const elMoves = document.querySelector('.moves')
-const elBoardSize = document.querySelector('.board-size')
+const gElTimeLeft = document.querySelector('.time-left')
+const gElMoves = document.querySelector('.moves')
+const gElBoardSize = document.querySelector('.board-size')
 
 // TIMER //
 
@@ -26,12 +26,7 @@ function stopTimer() {
 
 function renderTime(timeLeft) {
     // if (!this.countdown) this.stopTimer()
-    let minute = (Math.floor(timeLeft / 60))
-    if (minute < 10) minute = `0${minute}`
-    let second = (timeLeft % 60)
-    if (second < 10) second = `0${second}`
-    let timeToDisplay = 'Time left: ' + minute + ':' + second
-    elTimeLeft.innerText = timeToDisplay
+    gElTimeLeft.innerText = 'Time left: ' + getTimeDisplay(timeLeft)
 }
 
 // RENDER STATUS //
@@ -39,7 +34,7 @@ function renderTime(timeLeft) {
 function renderStatus() {
     const game = getGame()
     renderTime(game.timeLeft)
-    elMoves.innerText = `Moves: ${game.moves} `
-    elBoardSize.innerText = `Size: ${game.boardSize} cards`
+    gElMoves.innerText = `Moves: ${game.moves} `
+    gElBoardSize.innerText = `Size: ${game.boardSize} cards`
 }
 
