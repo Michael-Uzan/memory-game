@@ -1,5 +1,7 @@
 'use strict'
 
+let gElBody = document.querySelector('body')
+
 function onInit() {
     restartGame()
     renderBoard()
@@ -7,10 +9,13 @@ function onInit() {
 }
 
 function toggleModal(title = false) {
-    let elBody = document.querySelector('body')
-    elBody.classList.toggle('modal-open')
+    gElBody.classList.toggle('modal-open')
     const elTitle = document.querySelector('.modal-title');
     if (title) elTitle.innerText = title
+}
+
+function onToggleSettings() {
+    gElBody.classList.toggle('settings-open')
 }
 
 

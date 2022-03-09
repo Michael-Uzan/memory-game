@@ -12,6 +12,7 @@
 <body onload="onInit()">
 
     <header class="main-header">
+        <button class="btn-menu-toggle" onclick="onToggleSettings()">☰</button>
         <ul class="game-status clean-list flex space-around">
             <li class="time-left">Time Left: 01:00 </li>
             <li class="moves">Moves: </li>
@@ -19,14 +20,14 @@
         </ul>
     </header>
 
-    <aside class="game-settings">
+    <aside class="settings">
         <ul class="clean-list">
             <li>Time</li>
             <li>Size</li>
             <li>Close Cards</li>
         </ul>
     </aside>
-    <div class="settings-screen"></div>
+    <div class="settings-screen" onclick="onToggleSettings()"></div>
 
     <div class="board-container"></div>
 

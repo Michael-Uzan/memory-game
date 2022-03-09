@@ -1,0 +1,38 @@
+.settings{
+        position: fixed;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        min-width: 210px;
+        background-color: #4366a2d7;
+        height: 100vh;
+        box-shadow: 0px 0px 0px transparent;
+        transform: translateX(-100%);
+        /* transform: translateX(0); */
+        transition: transform 0.6s;
+        z-index: 2;
+}
+
+body.settings-open .settings {
+    transform: translateX(0);
+    box-shadow: -8px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.settings-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s;
+}
+
+body.settings-open .settings-screen {
+    opacity: 1;
+    pointer-events: auto;
+}
