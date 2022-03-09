@@ -3,6 +3,7 @@
 function onInit() {
     restartGame()
     renderBoard()
+    renderStatus()
 }
 
 function toggleModal(title = false) {

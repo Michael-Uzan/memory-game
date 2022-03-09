@@ -18,8 +18,14 @@ function generateBoard() {
     game.board = shuffle(game.board.slice(0, game.boardSize))
 }
 
+// GETTERS //
+
 function getBoard() {
     return game.board
+}
+
+function getGame() {
+    return game
 }
 
 function showCard(cardId) {
@@ -44,11 +50,15 @@ function checkVictory() {
     return game.board.every((card) => card.isShowen === true)
 }
 
-// TIMER
+// GAME STATUS
 
 function getNewTime() {
     game.timeLeft--
     return game.timeLeft
+}
+
+function addMove() {
+    game.moves++
 }
 
 

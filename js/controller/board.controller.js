@@ -21,11 +21,12 @@ function onCardClick(cardId, cardIdx) {
         startTimer()
         game.isStarted = true
     }
-
     gSelectedCardsIdx.push(cardIdx)
     showCard(cardId)
     renderBoard()
     if (gSelectedCardsIdx.length === 2) {
+        addMove()
+        renderStatus()
         if (!checkMatch(gSelectedCardsIdx)) {
             closeShowenCards(gSelectedCardsIdx)
             renderBoardTimeout()
@@ -45,4 +46,5 @@ function onRestartGame() {
     toggleModal()
     restartGame()
     renderBoard()
+    renderStatus()
 }

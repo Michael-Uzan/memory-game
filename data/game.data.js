@@ -1,7 +1,7 @@
 const gameData = {
     isStarted: false,
-    totalTime: 5,
-    timeLeft: 5,
+    totalTime: 10,
+    timeLeft: 10,
     boardSize: 12,
     moves: 0,
     board: []
