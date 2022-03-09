@@ -34,7 +34,7 @@ function renderTime(timeLeft) {
     elTimeLeft.innerText = timeToDisplay
 }
 
-// STATUS //
+// RENDER STATUS //
 
 function renderStatus() {
     const game = getGame()
