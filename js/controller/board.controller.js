@@ -1,7 +1,7 @@
 'use strict'
 
 let gSelectedCardsIdx = [];
-const gDelayCloseCards = 400;
+const gDelayCloseCards = 900;
 
 
 function renderBoard() {

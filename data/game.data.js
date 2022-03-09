@@ -4,5 +4,6 @@ const gameData = {
     timeLeft: 10,
     boardSize: 6,
     moves: 0,
+    closeCardsTimeout: 400,
     board: []
 }
