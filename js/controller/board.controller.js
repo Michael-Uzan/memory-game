@@ -1,7 +1,7 @@
 'use strict'
 
 let gSelectedCardsIdx = [];
-const gDelayCloseCards = 900;
+// const gDelayCloseCards = 900;
 
 
 function renderBoard() {
@@ -39,7 +39,8 @@ function onCardClick(cardId, cardIdx) {
 }
 
 function renderBoardTimeout() {
-    setTimeout(() => renderBoard(), gDelayCloseCards)
+    const game = getGame()
+    setTimeout(() => renderBoard(), game.closeShowenCards)
 }
 
 function onRestartGame() {

@@ -17,8 +17,8 @@ function renderSettings() {
     </li>
     <li>
     <h3>Close cards timeout</h3>
-    <h5>Slow</h5>
-    <input type="range" min="10" max="120" value="60" step="5">
+    <h5>${game.closeCardsTimeout}</h5>
+    <input type="range" min="100" max="900" value="${game.closeCardsTimeout}" step="100">
     </li>
     `
     gElSettingsBar.innerHTML = strHTML
