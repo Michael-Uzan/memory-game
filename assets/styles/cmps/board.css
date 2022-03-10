@@ -14,6 +14,7 @@
 
 .board-container .card {
     border: 2px solid grey;
+    background-color: var(--clr2);
 }
 
 .board-container .card img {
