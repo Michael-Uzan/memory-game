@@ -17,7 +17,7 @@ function renderSettings() {
     </li>
     <li>
     <h3>Close cards timeout</h3>
-    <h5>${game.closeCardsTimeout}</h5>
+    <h5>${getCloseTimeoutDisplay(game.closeCardsTimeout)}</h5>
     <input onchange="onChangeGameSettings(this)" name="closeCardsTimeout" type="range" min="100" max="900" value="${game.closeCardsTimeout}" step="100">
     </li>
     `

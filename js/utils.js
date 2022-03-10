@@ -35,6 +35,19 @@ function getTimeDisplay(timeSec) {
     return (minute + ':' + second)
 }
 
+function getCloseTimeoutDisplay(timeout) {
+    if (timeout < 200) return 'Super fast'
+    if (timeout < 300) return 'Very fast'
+    if (timeout < 400) return 'Fast'
+    if (timeout < 500) return 'Normal'
+    if (timeout < 600) return 'Notmal-Slow'
+    if (timeout < 700) return 'A bit slow'
+    if (timeout < 800) return 'Slow'
+    if (timeout < 900) return 'Very slow'
+    return 'Super slow'
+
+}
+
 // function makeLorem(size = 100) {
 //     var words = ['The sky', 'above', 'the port', 'was', 'the color of television', 'tuned', 'to', 'a dead channel', '.', 'All', 'this happened', 'more or less', '.', 'I', 'had', 'the story', 'bit by bit', 'from various people', 'and', 'as generally', 'happens', 'in such cases', 'each time', 'it', 'was', 'a different story', '.', 'It', 'was', 'a pleasure', 'to', 'burn'];
 //     var txt = '';
