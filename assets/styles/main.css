@@ -10,6 +10,7 @@
 
 /* CMPS */
 @import "cmps/header.css";
+@import "cmps/footer.css";
 @import "cmps/board.css";
 @import "cmps/modal.css";
 @import "cmps/settings.css";

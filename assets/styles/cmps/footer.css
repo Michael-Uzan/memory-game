@@ -1,0 +1,21 @@
+.main-footer {
+    background-color: var(--clr5);
+    color: var(--clr11);
+}
+.main-footer .footer-logo img {
+    max-width: 45px;
+    background-color: var(--clr5);
+}
+.main-footer .footer-desc {
+    text-align: center;
+}
+.main-footer .social-links {
+    padding-bottom: 35px;
+}
+.main-footer .social-links > :first-child {
+    margin-right: 25px;
+}
+.main-footer .social-links img {
+    width: 35px;
+    filter: invert(1);
+}
