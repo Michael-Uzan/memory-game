@@ -10,9 +10,9 @@
     <title>Memory Game</title>
 </head>
 
-<body onload="onInit()">
+<body onload="onInit()" class="main-layout">
 
-    <header class="main-header flex align-center ">
+    <header class="main-header full flex align-center ">
         <button class="btn-menu-toggle" onclick="onToggleSettings()">☰</button>
         <ul class="game-status clean-list flex space-around align-center">
             <li class="time-left">Time Left: 01:00 </li>
@@ -52,7 +52,7 @@
     </section>
     <div class="modal-screen"></div>
 
-    <footer class="main-footer">
+    <footer class="main-footer full">
         <div class="footer-logo flex direction-col align-center">
             <p>&copy; Memory Game by Michael Uzan</p>
             <img src="../assets/img/logo.png" />
