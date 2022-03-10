@@ -8,6 +8,7 @@ function onInit() {
     renderStatus()
     renderSettings()
     stopTimer()
+    adjustCardsGrid()
     gSelectedCardsIdx = []
 }
 
