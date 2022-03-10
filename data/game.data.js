@@ -2,8 +2,8 @@ const gameData = {
     isStarted: false,
     totalTime: 12,
     timeLeft: 10,
-    boardSize: 6,
+    boardSize: 10,
     moves: 0,
-    closeCardsTimeout: 600,
+    closeCardsTimeout: 900,
     board: []
 }

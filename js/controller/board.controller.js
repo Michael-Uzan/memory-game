@@ -1,8 +1,6 @@
 'use strict'
 
 let gSelectedCardsIdx = [];
-// const gDelayCloseCards = 900;
-
 
 function renderBoard() {
     const board = getBoard()
@@ -17,6 +15,7 @@ function renderBoard() {
 }
 
 function onCardClick(cardId, cardIdx) {
+    if (gSelectedCardsIdx.length === 2) return
     if (!game.isStarted) {
         startTimer()
         game.isStarted = true
@@ -33,14 +32,17 @@ function onCardClick(cardId, cardIdx) {
         } else if (checkVictory()) {
             toggleModal('Victory!!!')
             stopTimer()
-        }
-        gSelectedCardsIdx = []
+        } else gSelectedCardsIdx = []
+
     }
 }
 
 function renderBoardTimeout() {
     const game = getGame()
-    setTimeout(() => renderBoard(), game.closeCardsTimeout)
+    setTimeout(() => {
+        renderBoard()
+        gSelectedCardsIdx = []
+    }, game.closeCardsTimeout)
 }
 
 

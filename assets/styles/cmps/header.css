@@ -1,0 +1,19 @@
+.main-header {
+    padding: 0px 15px 0px 5px;
+    margin-bottom: 20px;
+    background-color: var(--clr7);
+    color: var(--clr11);
+}
+
+.main-header .btn-menu-toggle {
+    background-color: var(--clr7);
+    color: var(--clr11);
+    font-size: 1.7rem;
+    padding: 7px 10px 10px 10px;
+}
+
+.main-header .game-status {
+    gap: 0px 15px;
+    justify-self: flex-end;
+    width: 100%;
+}

@@ -9,6 +9,7 @@
 @import "basics/buttons.css";
 
 /* CMPS */
+@import "cmps/header.css";
 @import "cmps/board.css";
 @import "cmps/modal.css";
 @import "cmps/settings.css";
