@@ -8,19 +8,25 @@ function renderSettings() {
     <li>
     <h3>Time</h3>
     <h5>${getTimeDisplay(game.totalTime)}</h5>
-    <input type="range" min="10" max="120" value="${game.totalTime}" step="5">
+    <input onchange="onChangeGameSettings(this)" name="totalTime" type="range" min="10" max="120" value="${game.totalTime}" step="5">
     </li>
     <li>
     <h3>Size</h3>
     <h5>${game.boardSize} Cards</h5>
-    <input type="range" min="4" max="20" value="${game.boardSize}" step="2">
+    <input onchange="onChangeGameSettings(this)" name="boardSize" type="range" min="4" max="20" value="${game.boardSize}" step="2">
     </li>
     <li>
     <h3>Close cards timeout</h3>
     <h5>${game.closeCardsTimeout}</h5>
-    <input type="range" min="100" max="900" value="${game.closeCardsTimeout}" step="100">
+    <input onchange="onChangeGameSettings(this)" name="closeCardsTimeout" type="range" min="100" max="900" value="${game.closeCardsTimeout}" step="100">
     </li>
     `
     gElSettingsBar.innerHTML = strHTML
+}
+
+function onChangeGameSettings(ev) {
+    editGame(ev.name, ev.value)
+    renderSettings()
+    renderStatus()
 }
 

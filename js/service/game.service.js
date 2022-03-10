@@ -2,7 +2,7 @@
 
 let game = JSON.parse(JSON.stringify(gameData));
 
-// INIT / RESTART GAME
+// INIT / RESTART GAME //
 
 function restartGame() {
     generateBoard()
@@ -28,6 +28,8 @@ function getGame() {
     return game
 }
 
+// POST / EDIT GAME //
+
 function showCard(cardId) {
     const cardIdx = game.board.findIndex(card => card._id === cardId)
     game.board[cardIdx].isShowen = true
@@ -40,7 +42,11 @@ function closeShowenCards(selectedCardsIdx) {
     })
 }
 
-// GAME CONTROLS
+function editGame(field, value) {
+    game[field] = value
+}
+
+// GAME CONTROLS //
 
 function checkMatch(selectedCardsIdx) {
     return game.board[selectedCardsIdx[0]].matchNumber === game.board[selectedCardsIdx[1]].matchNumber
@@ -50,7 +56,7 @@ function checkVictory() {
     return game.board.every((card) => card.isShowen === true)
 }
 
-// GAME STATUS
+// GAME STATUS //
 
 function getNewTime() {
     game.timeLeft--
