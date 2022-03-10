@@ -7,6 +7,7 @@ function onInit() {
     renderBoard()
     renderStatus()
     renderSettings()
+    stopTimer()
 }
 
 function toggleModal(title = false) {
@@ -18,5 +19,11 @@ function toggleModal(title = false) {
 function onToggleSettings() {
     gElBody.classList.toggle('settings-open')
 }
+
+function onRestartGame() {
+    toggleModal()
+    onInit()
+}
+
 
 

@@ -44,6 +44,7 @@ function closeShowenCards(selectedCardsIdx) {
 
 function editGame(field, value) {
     game[field] = value
+    console.log(game)
 }
 
 // GAME CONTROLS //

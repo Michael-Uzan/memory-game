@@ -25,8 +25,8 @@ function renderSettings() {
 }
 
 function onChangeGameSettings(ev) {
-    editGame(ev.name, ev.value)
+    editGame(ev.name, +ev.value)
     renderSettings()
-    renderStatus()
+    onInit()
 }
 

@@ -1,25 +1,25 @@
-.settings{
-        position: fixed;
-        top: 0;
-        left: 0;
-        flex-direction: column;
-        min-width: 210px;
-        background-color: var(--clr10);
-        height: 100vh;
-        box-shadow: 0px 0px 0px transparent;
-        /* transform: translateX(-100%); */
-        transform: translateX(0);
-        transition: transform 0.6s;
-        z-index: 2;
-        color: var(--clr11);
+.settings {
+    position: fixed;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    min-width: 210px;
+    background-color: var(--clr10);
+    height: 100vh;
+    box-shadow: 0px 0px 0px transparent;
+    transform: translateX(-100%);
+    /* transform: translateX(0); */
+    transition: transform 0.6s;
+    z-index: 2;
+    color: var(--clr11);
 }
 
-.settings h1{
-    padding-top: 10px ;
+.settings h1 {
+    padding-top: 10px;
     margin-bottom: 20px;
 }
 
-.settings h5{
+.settings h5 {
     margin-bottom: 10px;
 }
 
@@ -29,8 +29,8 @@
     box-shadow: 0px 3px 0px 0px;
 }
 
-.settings li:first-child{
-    border-top: 3px solid ;
+.settings li:first-child {
+    border-top: 3px solid;
     padding-top: 20px;
 }
 

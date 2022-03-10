@@ -40,12 +40,8 @@ function onCardClick(cardId, cardIdx) {
 
 function renderBoardTimeout() {
     const game = getGame()
-    setTimeout(() => renderBoard(), game.closeShowenCards)
+    setTimeout(() => renderBoard(), game.closeCardsTimeout)
 }
 
-function onRestartGame() {
-    toggleModal()
-    restartGame()
-    renderBoard()
-    renderStatus()
-}
+
+
