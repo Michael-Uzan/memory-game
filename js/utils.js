@@ -45,7 +45,14 @@ function getCloseTimeoutDisplay(timeout) {
     if (timeout < 800) return 'Slow'
     if (timeout < 900) return 'Very slow'
     return 'Super slow'
+}
 
+function duplicateStr(str, duplicateCount) {
+    let duplicatedStr = ''
+    for (let i = 0; i < duplicateCount; i++) {
+        duplicatedStr += str
+    }
+    return duplicatedStr
 }
 
 // function makeLorem(size = 100) {

@@ -1,8 +1,15 @@
 .board-container {
+    margin-bottom: 20px;
     display: grid;
-    gap: 10px 10px;
-    grid-template-columns: 100px 100px 100px 100px;
-    grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px;
+    place-content: center;
+    gap: 5px 5px;
+    /* grid-template-columns: minmax(60px, 105px) minmax(60px, 105px) minmax(60px, 105px) minmax(60px, 105px) minmax(
+            60px,
+            105px
+        ); */
+    grid-template-rows:
+        minmax(50px, 105px) minmax(50px, 105px) minmax(50px, 105px) minmax(50px, 105px) minmax(50px, 105px)
+        minmax(50px, 105px) minmax(50px, 105px);
 }
 
 .board-container .card {
@@ -10,5 +17,5 @@
 }
 
 .board-container .card img {
-    object-fit: fill;
+    object-fit: cover;
 }

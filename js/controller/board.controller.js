@@ -1,6 +1,7 @@
 'use strict'
 
 let gSelectedCardsIdx = [];
+const gElBoard = document.querySelector('.board-container')
 
 function renderBoard() {
     const board = getBoard()
@@ -10,7 +11,7 @@ function renderBoard() {
             `<div class="card"><img src=${card.imgUrl}></div>\n` :
             `<div class="card pointer" onclick="onCardClick('${card._id}' , '${cardIdx}')" ></div>\n`
     });
-    document.querySelector('.board-container').innerHTML = strHTML;
+    gElBoard.innerHTML = strHTML;
 
 }
 
@@ -45,5 +46,29 @@ function renderBoardTimeout() {
     }, game.closeCardsTimeout)
 }
 
+function adjustCardsGrid() {
+    let strStyle = ''
+    const game = getGame()
+    switch (game.boardSize) {
+        case 4:
+            strStyle = duplicateStr('minmax(60px, 105px) ', 2)
+            break;
+        case 6:
+        case 12:
+        case 18:
+            strStyle = duplicateStr('minmax(60px, 105px) ', 3)
+            break;
+        case 10:
+        case 14:
+        case 26:
+        case 30:
+            strStyle = duplicateStr('minmax(60px, 105px) ', 5)
+            break;
+        default:
+            strStyle = duplicateStr('minmax(60px, 105px) ', 4)
+            break;
+    }
+    gElBoard.style.gridTemplateColumns = strStyle
+}
 
 
