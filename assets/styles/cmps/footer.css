@@ -2,6 +2,15 @@
     background-color: var(--clr5);
     color: var(--clr11);
 }
+
+.main-footer button {
+    margin-top: 10px;
+    background-color: var(--clr5);
+    color: var(--bgcColor);
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
 .main-footer .footer-logo img {
     max-width: 45px;
     background-color: var(--clr5);
