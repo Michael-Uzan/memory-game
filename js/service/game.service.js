@@ -14,7 +14,7 @@ async function restartGame() {
 // BOARD //
 
 async function generateBoard(boardType) {
-    if (boardType === 'robots') game.board = JSON.parse(JSON.stringify(boardData));
+    if (boardType === 'robots') game.board = await getRobotsBoard();
     if (boardType === 'pokemons') game.board = await getPokemonsBoard();
     if (boardType === 'profiles') game.board = await getProfilesBoard();
     game.board = shuffle(game.board.slice(0, game.boardSize))

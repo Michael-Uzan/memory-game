@@ -1,6 +1,5 @@
 'use strict'
 const POKEMON_QUANTITY = 15;
-const POKEMON_DB = 'pokemonDB';
 
 async function getPokemonsBoard() {
     const pokemonsBoard = await _generatePokemonsBoard()
