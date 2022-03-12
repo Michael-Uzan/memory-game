@@ -1,20 +1,8 @@
-/* @font-face {
-    font-family: SourceSansPro-Black;
-    src: url(../../../assets/fonts/SourceSansPro-Black.ttf);
+@font-face {
+    font-family: PermanentMarker-Regular;
+    src: url(../../fonts/PermanentMarker-Regular.ttf);
 }
 @font-face {
-    font-family: SourceSansPro-Bold;
-    src: url(../../../assets/fonts/SourceSansPro-Bold.ttf);
+    font-family: PatrickHand-Regular;
+    src: url(../../fonts/PatrickHand-Regular.ttf);
 }
-@font-face {
-    font-family: SourceSansPro-Semi;
-    src: url(../../../assets/fonts/SourceSansPro-SemiBold.ttf);
-}
-@font-face {
-    font-family: SourceSansPro-Reg;
-    src: url(../../../assets/fonts/SourceSansPro-Regular.ttf);
-}
-@font-face {
-    font-family: SourceSansPro-Light;
-    src: url(../../../assets/fonts/SourceSansPro-Light.ttf);
-} */
