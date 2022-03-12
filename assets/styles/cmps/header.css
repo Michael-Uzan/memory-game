@@ -17,3 +17,21 @@
     justify-self: flex-end;
     width: 100%;
 }
+
+.main-header .game-status li {
+    display: flex;
+    align-items: center;
+}
+
+.main-header .game-status .time-left img {
+    width: 30px;
+}
+.main-header .game-status .moves {
+    width: 50px;
+}
+.main-header .game-status .board-size {
+    width: 20px;
+}
+.main-header .game-status .board-size img {
+    margin-right: 8px;
+}

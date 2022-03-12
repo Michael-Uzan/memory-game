@@ -26,7 +26,7 @@ function stopTimer() {
 
 function renderTime(timeLeft) {
     // if (!this.countdown) this.stopTimer()
-    gElTimeLeft.innerText = 'Time left: ' + getTimeDisplay(timeLeft)
+    gElTimeLeft.innerHTML = '<img src="./assets/img/timer.png"> ' + getTimeDisplay(timeLeft)
 }
 
 // RENDER STATUS //
@@ -34,7 +34,7 @@ function renderTime(timeLeft) {
 function renderStatus() {
     const game = getGame()
     renderTime(game.timeLeft)
-    gElMoves.innerText = `Moves: ${game.moves} `
-    gElBoardSize.innerText = `Size: ${game.boardSize} cards`
+    gElMoves.innerHTML = `<img src="./assets/img/moves.jpg"> ${game.moves} `
+    gElBoardSize.innerHTML = `<img src="./assets/img/size.png"><span>${game.boardSize}</span> `
 }
 
