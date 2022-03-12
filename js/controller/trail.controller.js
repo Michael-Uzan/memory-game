@@ -1,4 +1,5 @@
 'use strict'
+const isTrailLocalStorage = 'isTrail-LC'
 
 function startTrail() {
     if (loadFromStorage(isTrailLocalStorage)) return
@@ -26,4 +27,9 @@ function finishTrail() {
     gElBody.classList.remove('trail-step-3', 'settings-open')
     gElModal.classList.remove('align-right')
     saveToStorage(isTrailLocalStorage, true)
+}
+
+function takeTrail() {
+    saveToStorage(isTrailLocalStorage, false)
+    onInit()
 }

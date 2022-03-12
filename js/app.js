@@ -1,9 +1,9 @@
 'use strict'
-let gElLoading = document.querySelector('.loading-screen')
-let gElBody = document.querySelector('body')
-let gElConfetti = document.querySelector('.confetti')
-let gElModal = document.querySelector('.modal')
-let isTrailLocalStorage = 'isTrail-LC'
+const gElLoading = document.querySelector('.loading-screen')
+const gElBody = document.querySelector('body')
+const gElConfetti = document.querySelector('.confetti')
+const gElModal = document.querySelector('.modal')
+
 ConfettiGenerator({ target: 'confetti' }).render()
 
 async function onInit() {
@@ -51,6 +51,8 @@ function toggleConfetti(isActivate = true) {
     if (isActivate) gElConfetti.classList.add('active');
     else gElConfetti.classList.remove('active');
 }
+
+
 
 
 

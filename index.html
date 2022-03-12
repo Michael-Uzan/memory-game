@@ -18,7 +18,7 @@
 
 <body onload="onInit()" onbeforeunload="onUnload()" class="main-layout">
 
-    <header class="main-header full flex align-center ">
+    <header class="main-header full flex align-center " id="top">
         <button class="btn-menu-toggle" onclick="onToggleSettings()">☰</button>
         <ul class="game-status clean-list flex space-around align-center">
             <li class="time-left"></li>
@@ -71,6 +71,7 @@
     <div class="modal-screen"></div>
 
     <footer class="main-footer full">
+        <button onclick="takeTrail()"><a href="#top">Take Trail</a></button>
         <div class="footer-logo flex direction-col align-center">
             <p>&copy; Memory Game by Michael Uzan</p>
             <img src="./assets/img/logo.png" />
