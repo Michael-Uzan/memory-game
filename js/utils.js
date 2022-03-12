@@ -1,6 +1,6 @@
 'use strict'
 
-function makeId(length = 8) {
+function makeId(length = 17) {
     var txt = '';
     var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     for (var i = 0; i < length; i++) {

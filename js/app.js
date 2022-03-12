@@ -14,6 +14,10 @@ function onInit() {
     gSelectedCardsIdx = []
 }
 
+function onUnload() {
+    console.log('unload')
+}
+
 function toggleModal(title = '', text = '', text2 = '') {
     gElBody.classList.toggle('modal-open')
     const elTitle = document.querySelector('.modal-title');
