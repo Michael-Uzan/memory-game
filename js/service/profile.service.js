@@ -18,8 +18,7 @@ async function _generateProfilesBoard() {
 }
 
 function _buildProfileData(result, matchNumber) {
-    let img = new Image()
-    img.src = result.picture.large
+    loadImgToCache(result.picture.large)
     return {
         _id: makeId(),
         matchNumber,

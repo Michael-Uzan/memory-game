@@ -19,8 +19,7 @@ async function _generateRobotsBoard() {
 }
 
 function _buildRobotData(matchNumber) {
-    let img = new Image()
-    img.src = `${ROBOT_URL}${matchNumber}`
+    loadImgToCache(`${ROBOT_URL}${matchNumber}`)
     return {
         _id: makeId(),
         matchNumber,
