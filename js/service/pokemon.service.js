@@ -11,7 +11,7 @@ async function _generatePokemonsBoard() {
     const randomNum = getRandomInt(0, 300)
     for (let i = randomNum; i < (POKEMON_QUANTITY + randomNum); i++) {
         const pokemon = await _buildPokemonData((i + 1))
-        const pokemonPair = { ...pokemon, _id: makeId() }
+        const pokemonPair = duplicatePairCard(pokemon)
         pokemonsBoard.push(pokemon, pokemonPair)
     }
     return pokemonsBoard

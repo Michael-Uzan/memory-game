@@ -12,7 +12,7 @@ async function _generateRobotsBoard() {
     const randomNum = getRandomInt(0, 300)
     for (let i = randomNum; i < (ROBOT_QUANTITY + randomNum); i++) {
         const robot = _buildRobotData((i + 1))
-        const robotPair = { ...robot, _id: makeId() }
+        const robotPair = duplicatePairCard(robot)
         robotsBoard.push(robot, robotPair)
     }
     return robotsBoard

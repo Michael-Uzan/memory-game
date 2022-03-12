@@ -11,7 +11,7 @@ async function _generatePeoplesBoard() {
     const res = await axios.get(profileURL)
     res.data.results.forEach((result, idx) => {
         const people = _buildPeopleData(result, idx + 1)
-        const peoplePair = { ...people, _id: makeId() }
+        const peoplePair = duplicatePairCard(people)
         profileBoard.push(people, peoplePair)
     })
     return profileBoard

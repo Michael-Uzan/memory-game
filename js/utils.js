@@ -55,6 +55,10 @@ function duplicateStr(str, duplicateCount) {
     return duplicatedStr
 }
 
+function duplicatePairCard(card) {
+    return { ...card, _id: makeId() }
+}
+
 function loadImgToCache(imgUrl) {
     let img = new Image()
     img.src = imgUrl

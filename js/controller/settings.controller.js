@@ -22,7 +22,7 @@ function renderSettings() {
     </li>
     <li>
     <h3>Board Type</h3>
-    <div class="board-type" onclick="onSelectBoardType('pokemons')"><img src="./assets/img/pokemon.jpg"></div>
+    <div class="board-type" onclick="onSelectBoardType('pokemon')"><img src="./assets/img/pokemon.jpg"></div>
     <div class="board-type" onclick="onSelectBoardType('robot')"><img src="./assets/img/robot.png"></div>
     <div class="board-type" onclick="onSelectBoardType('people')"><img src="./assets/img/people.png"></div>
     </li>
