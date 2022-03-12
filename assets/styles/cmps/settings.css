@@ -34,6 +34,13 @@
     padding-top: 20px;
 }
 
+.settings li .board-type img {
+    margin-bottom: 5px;
+    width: 130px;
+    height: 45px;
+    object-fit: contain;
+}
+
 body.settings-open .settings {
     transform: translateX(0);
     box-shadow: -8px 0px 20px rgba(0, 0, 0, 0.2);
