@@ -2,10 +2,9 @@
 const POKEMON_QUANTITY = 15;
 const POKEMON_DB = 'pokemonDB';
 
-getPokemonsBoard()
-
 async function getPokemonsBoard() {
-    const pokemonsBoard = await loadFromStorage(POKEMON_DB) || _generatePokemonsBoard()
+    // await sleep(400)
+    const pokemonsBoard = loadFromStorage(POKEMON_DB) || await _generatePokemonsBoard()
     return pokemonsBoard
 }
 
@@ -31,4 +30,10 @@ async function _buildPokemonData(matchNumber) {
         isShowen: false,
         imgUrl: pokemon.sprites.other.dream_world.front_default,
     }
+}
+
+async function sleep(milisec) {
+    return (new Promise((resolve, reject) => {
+        setTimeout(() => resolve(), milisec)
+    }))
 }

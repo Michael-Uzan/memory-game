@@ -5,5 +5,6 @@ const gameData = {
     boardSize: 10,
     moves: 0,
     closeCardsTimeout: 400,
+    boardType: 'pokemons',
     board: []
 }

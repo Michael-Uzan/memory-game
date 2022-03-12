@@ -4,8 +4,8 @@ let game = JSON.parse(JSON.stringify(gameData));
 
 // INIT / RESTART GAME //
 
-function restartGame() {
-    generateBoard()
+async function restartGame() {
+    await generateBoard(game.boardType)
     game.isStarted = false
     game.timeLeft = game.totalTime
     game.moves = 0
@@ -13,8 +13,9 @@ function restartGame() {
 
 // BOARD //
 
-function generateBoard() {
-    game.board = JSON.parse(JSON.stringify(boardData));
+async function generateBoard(boardType) {
+    if (boardType === 'robots') game.board = JSON.parse(JSON.stringify(boardData));
+    if (boardType === 'pokemons') game.board = await getPokemonsBoard();
     game.board = shuffle(game.board.slice(0, game.boardSize))
 }
 

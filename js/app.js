@@ -1,11 +1,13 @@
 'use strict'
-
+let gElLoading = document.querySelector('.loading-screen')
 let gElBody = document.querySelector('body')
 let gElConfetti = document.querySelector('.confetti')
 ConfettiGenerator({ target: 'confetti' }).render()
 
-function onInit() {
-    restartGame()
+async function onInit() {
+    toggleLoading()
+    await restartGame()
+    toggleLoading()
     renderBoard()
     renderStatus()
     renderSettings()
@@ -16,6 +18,10 @@ function onInit() {
 
 function onUnload() {
     console.log('unload')
+}
+
+function toggleLoading() {
+    gElLoading.classList.toggle('activate')
 }
 
 function toggleModal(title = '', text = '', text2 = '') {
