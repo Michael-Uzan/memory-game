@@ -23,6 +23,10 @@
     align-items: center;
 }
 
+.main-header .game-status .time-left {
+    color: var(--clr2);
+}
+
 .main-header .game-status .time-left img {
     width: 30px;
 }
