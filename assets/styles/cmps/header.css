@@ -18,6 +18,18 @@
     width: 100%;
 }
 
+body.trail-step-1 .main-header .game-status {
+    outline: 5px solid var(--clr1);
+    background-color: var(--clr7);
+    z-index: 10;
+}
+
+body.trail-step-2 .main-header .btn-menu-toggle {
+    outline: 5px solid var(--clr1);
+    background-color: var(--clr7);
+    z-index: 2;
+}
+
 .main-header .game-status li {
     display: flex;
     align-items: center;

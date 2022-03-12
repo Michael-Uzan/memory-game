@@ -46,6 +46,15 @@ body.settings-open .settings {
     box-shadow: -8px 0px 20px rgba(0, 0, 0, 0.2);
 }
 
+body.settings-open.trail-step-3 .settings,
+body.settings-open.trail-step-2 .settings {
+    pointer-events: none;
+}
+
+body.settings-open.trail-step-3 .settings-bar {
+    outline: 8px dotted var(--clr7);
+}
+
 .settings-screen {
     position: fixed;
     top: 0;

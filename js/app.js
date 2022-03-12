@@ -2,6 +2,8 @@
 let gElLoading = document.querySelector('.loading-screen')
 let gElBody = document.querySelector('body')
 let gElConfetti = document.querySelector('.confetti')
+let gElModal = document.querySelector('.modal')
+let isTrailLocalStorage = 'isTrail-LC'
 ConfettiGenerator({ target: 'confetti' }).render()
 
 async function onInit() {
@@ -14,6 +16,7 @@ async function onInit() {
     stopTimer()
     adjustCardsGrid()
     gSelectedCardsIdx = []
+    startTrail()
 }
 
 function onUnload() {
@@ -24,14 +27,14 @@ function toggleLoading() {
     gElLoading.classList.toggle('activate')
 }
 
-function toggleModal(title = '', text = '', text2 = '') {
+function toggleModal(onClickFunction = '', btnTxt = '', title = '', text = '', text2 = '') {
     gElBody.classList.toggle('modal-open')
-    const elTitle = document.querySelector('.modal-title');
-    const elText = document.querySelector('.modal-text');
-    const elText2 = document.querySelector('.modal-text-2');
-    elTitle.innerText = title
-    elText.innerText = text
-    elText2.innerText = text2
+    gElModal.innerHTML = `
+    <h1 class="modal-title">${title}</h1>
+    <h5 class="modal-text">${text}</h5>
+    <h5 class="modal-text-2">${text2}</h5>
+    <button class="modal-btn" onclick="${onClickFunction}()">${btnTxt}</button>
+    `
 }
 
 function onToggleSettings() {

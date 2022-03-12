@@ -1,12 +1,3 @@
-.modal .close-modal {
-    position: relative;
-    left: 70px;
-    bottom: 30px;
-    background-color: var(--bgcColor);
-    border: 2px solid var(--clr2);
-    border-radius: 50%;
-}
-
 .modal-screen {
     position: fixed;
     top: 0;
@@ -37,6 +28,10 @@ body.modal-open .modal-screen {
     border-radius: 8px;
     background-color: #fff;
     z-index: 2;
+}
+
+.modal.align-right {
+    left: 75%;
 }
 
 body.modal-open .modal {
