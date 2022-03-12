@@ -31,13 +31,14 @@ function onCardClick(cardId, cardIdx) {
             closeShowenCards(gSelectedCardsIdx)
             renderBoardTimeout()
         } else if (checkVictory()) {
-            toggleModal('Victory!!!', `Solve at ${getTimeDisplay(game.timeLeft)}`, `${game.moves} moves`)
+            toggleModal('Victory!!!', `Solve at ${getTimeDisplay(game.totalTime - game.timeLeft)}`, `${game.moves} moves`)
             toggleConfetti()
             stopTimer()
         } else gSelectedCardsIdx = []
-
     }
 }
+
+
 
 function renderBoardTimeout() {
     const game = getGame()

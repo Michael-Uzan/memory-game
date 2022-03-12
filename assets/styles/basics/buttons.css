@@ -5,6 +5,7 @@ button {
     font-size: rem(17px);
     padding: 10px;
     background-color: white;
+    font-family: PatrickHand-Regular, sans-serif;
 }
 
 button:hover {
