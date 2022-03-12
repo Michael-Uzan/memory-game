@@ -46,3 +46,8 @@ body.modal-open .modal {
 .modal button {
     background-color: var(--clr2);
 }
+
+.modal .modal-text,
+.modal .modal-text-2 {
+    margin-bottom: 20px;
+}
