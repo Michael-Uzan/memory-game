@@ -1,23 +1,23 @@
 'use strict'
 const profileURL = 'https://randomuser.me/api/?results=15'
 
-async function getProfilesBoard() {
-    const profilesBoard = await _generateProfilesBoard()
+async function getPeoplesBoard() {
+    const profilesBoard = await _generatePeoplesBoard()
     return profilesBoard
 }
 
-async function _generateProfilesBoard() {
+async function _generatePeoplesBoard() {
     const profileBoard = []
     const res = await axios.get(profileURL)
     res.data.results.forEach((result, idx) => {
-        const profile = _buildProfileData(result, idx + 1)
-        const profilePair = { ...profile, _id: makeId() }
-        profileBoard.push(profile, profilePair)
+        const people = _buildPeopleData(result, idx + 1)
+        const peoplePair = { ...people, _id: makeId() }
+        profileBoard.push(people, peoplePair)
     })
     return profileBoard
 }
 
-function _buildProfileData(result, matchNumber) {
+function _buildPeopleData(result, matchNumber) {
     loadImgToCache(result.picture.large)
     return {
         _id: makeId(),

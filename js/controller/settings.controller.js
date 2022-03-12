@@ -20,6 +20,12 @@ function renderSettings() {
     <h5>${getCloseTimeoutDisplay(game.closeCardsTimeout)}</h5>
     <input onchange="onChangeGameSettings(this)" name="closeCardsTimeout" type="range" min="100" max="900" value="${game.closeCardsTimeout}" step="100">
     </li>
+    <li>
+    <h3>Board Type</h3>
+    <div onclick="onSelectBoardType('pokemons')"><img src="./assets/img/pokemon.jpg"></div>
+    <div onclick="onSelectBoardType('robot')"><img src="./assets/img/robot.png"></div>
+    <div onclick="onSelectBoardType('people')"><img src="./assets/img/people.png"></div>
+    </li>
     `
     gElSettingsBar.innerHTML = strHTML
 }
@@ -28,6 +34,11 @@ function onChangeGameSettings(ev) {
     editGame(ev.name, +ev.value)
     adjustCardsGrid()
     renderSettings()
+    onInit()
+}
+
+function onSelectBoardType(boardType) {
+    editGame('boardType', boardType)
     onInit()
 }
 
