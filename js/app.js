@@ -1,6 +1,8 @@
 'use strict'
 
 let gElBody = document.querySelector('body')
+let gElConfetti = document.querySelector('.confetti')
+ConfettiGenerator({ target: 'confetti' }).render()
 
 function onInit() {
     restartGame()
@@ -12,14 +14,14 @@ function onInit() {
     gSelectedCardsIdx = []
 }
 
-function toggleModal(title = false, text = false, text2 = false) {
+function toggleModal(title = '', text = '', text2 = '') {
     gElBody.classList.toggle('modal-open')
     const elTitle = document.querySelector('.modal-title');
     const elText = document.querySelector('.modal-text');
     const elText2 = document.querySelector('.modal-text-2');
-    if (title) elTitle.innerText = title
-    if (text) elText.innerText = text
-    if (text2) elText2.innerText = text2
+    elTitle.innerText = title
+    elText.innerText = text
+    elText2.innerText = text2
 }
 
 function onToggleSettings() {
@@ -28,8 +30,16 @@ function onToggleSettings() {
 
 function onRestartGame() {
     toggleModal()
+    toggleConfetti(false)
     onInit()
 }
+
+function toggleConfetti(isActivate = true) {
+    if (isActivate) gElConfetti.classList.add('active');
+    else gElConfetti.classList.remove('active');
+}
+
+
 
 
 

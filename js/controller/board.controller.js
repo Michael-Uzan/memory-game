@@ -32,6 +32,7 @@ function onCardClick(cardId, cardIdx) {
             renderBoardTimeout()
         } else if (checkVictory()) {
             toggleModal('Victory!!!', `Solve at ${getTimeDisplay(game.timeLeft)}`, `${game.moves} moves`)
+            toggleConfetti()
             stopTimer()
         } else gSelectedCardsIdx = []
 

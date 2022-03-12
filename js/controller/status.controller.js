@@ -13,7 +13,7 @@ function startTimer() {
         const timeLeft = getNewTime()
         renderTime(timeLeft)
         if (timeLeft === 0) {
-            toggleModal('You lost')
+            toggleModal('You lost!', 'Time is up')
             stopTimer()
         }
     }, 1000)
