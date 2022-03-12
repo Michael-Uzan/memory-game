@@ -19,4 +19,5 @@
 
 .board-container .card img {
     object-fit: cover;
+    background-color: #fff;
 }
