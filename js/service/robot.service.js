@@ -10,9 +10,7 @@ async function getRobotsBoard() {
 
 async function _generateRobotsBoard() {
     const robotsBoard = []
-    const randomNum = getRandomEvenInt(0, 10)
-    for (let i = randomNum; i < (ROBOT_QUANTITY + randomNum); i++) {
-        // for (let i = 0; i < ROBOT_QUANTITY; i++) {
+    for (let i = 0; i < ROBOT_QUANTITY; i++) {
         const robot = _buildRobotData((i + 1))
         const robotPair = duplicatePairCard(robot)
         robotsBoard.push(robot, robotPair)
