@@ -3,6 +3,7 @@ const gElLoading = document.querySelector('.loading-screen')
 const gElBody = document.querySelector('body')
 const gElConfetti = document.querySelector('.confetti')
 const gElModal = document.querySelector('.modal')
+const gOffline = document.querySelector('.offline')
 
 ConfettiGenerator({ target: 'confetti' }).render()
 
@@ -20,6 +21,7 @@ async function onInit() {
 }
 
 function onLoad() {
+    if (!navigator.onLine) gOffline.classList.add('visible')
     window.addEventListener('offline', onOffline)
     window.addEventListener('online', onOnline)
 }
@@ -31,10 +33,12 @@ function onUnload() {
 
 function onOnline() {
     console.log('online')
+    gOffline.classList.remove('visible')
 }
 
 function onOffline() {
     console.log('onffline')
+    gOffline.classList.add('visible')
 }
 
 function toggleLoading() {
