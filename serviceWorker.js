@@ -23,7 +23,7 @@ self.addEventListener('activate', (event) => {
 })
 
 self.addEventListener('fetch', (event) => {
-    console.log('Service Worker: Fetching ')
+    // console.log('Service Worker: Fetching ')
     event.respondWith(
         fetch(event.request)
             .then(res => {
