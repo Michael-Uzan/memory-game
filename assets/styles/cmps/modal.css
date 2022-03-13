@@ -30,8 +30,10 @@ body.modal-open .modal-screen {
     z-index: 2;
 }
 
-.modal.align-right {
-    left: 75%;
+@media (max-width: 800px) {
+    .modal.align-right {
+        left: 77%;
+    }
 }
 
 body.modal-open .modal {
