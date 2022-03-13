@@ -21,10 +21,21 @@ function shuffle(items) {
     return items;
 }
 
+
+
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min; //including minimum
+
+}
+
+function getRandomEvenInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    let random = Math.floor(Math.random() * (max - min)) + min; //including minimum
+    return +random * 2
+
 }
 
 function getTimeDisplay(timeSec) {

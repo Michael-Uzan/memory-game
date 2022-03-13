@@ -1,6 +1,6 @@
 'use strict'
 
-const profileURL = 'https://randomuser.me/api/?results=15'
+const profileURL = 'https://randomuser.me/api/?results=100'
 
 async function getPeoplesBoard() {
     const profilesBoard = await _generatePeoplesBoard()
