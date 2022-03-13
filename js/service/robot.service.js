@@ -1,4 +1,5 @@
 'use strict'
+
 const ROBOT_QUANTITY = 300;
 const ROBOT_URL = 'https://robohash.org/'
 

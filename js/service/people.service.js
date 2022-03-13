@@ -1,4 +1,5 @@
 'use strict'
+
 const profileURL = 'https://randomuser.me/api/?results=15'
 
 async function getPeoplesBoard() {

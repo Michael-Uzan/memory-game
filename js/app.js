@@ -1,4 +1,5 @@
 'use strict'
+
 const gElLoading = document.querySelector('.loading-screen')
 const gElBody = document.querySelector('body')
 const gElConfetti = document.querySelector('.confetti')
@@ -32,12 +33,10 @@ function onUnload() {
 }
 
 function onOnline() {
-    console.log('online')
     gOffline.classList.remove('visible')
 }
 
 function onOffline() {
-    console.log('onffline')
     gOffline.classList.add('visible')
 }
 

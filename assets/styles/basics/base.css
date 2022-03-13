@@ -44,11 +44,3 @@ a {
 a:hover {
     cursor: pointer;
 }
-
-::selection {
-}
-
-/* input:focus-visible,
-textarea:focus-visible {
-    outline: -webkit-focus-ring-color auto 0px;
-} */

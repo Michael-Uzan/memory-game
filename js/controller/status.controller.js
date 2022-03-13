@@ -25,7 +25,6 @@ function stopTimer() {
 
 
 function renderTime(timeLeft) {
-    // if (!this.countdown) this.stopTimer()
     gElTimeLeft.innerHTML = '<img src="./assets/img/timer.png"> ' + getTimeDisplay(timeLeft)
 }
 

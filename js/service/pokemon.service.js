@@ -1,4 +1,5 @@
 'use strict'
+
 const POKEMON_QUANTITY = 100;
 
 async function getPokemonsBoard() {
