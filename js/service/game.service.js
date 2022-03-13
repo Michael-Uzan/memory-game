@@ -17,7 +17,8 @@ async function generateBoard(boardType) {
     if (boardType === 'robot') game.board = await getRobotsBoard();
     if (boardType === 'pokemon') game.board = await getPokemonsBoard();
     if (boardType === 'people') game.board = await getPeoplesBoard();
-    game.board = shuffle(game.board.slice(0, game.boardSize))
+    game.board = shuffle(game.board)
+    game.board = game.board.slice(0, game.boardSize)
 }
 
 // GETTERS //

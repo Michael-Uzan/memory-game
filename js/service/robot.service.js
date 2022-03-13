@@ -1,5 +1,5 @@
 'use strict'
-const ROBOT_QUANTITY = 15;
+const ROBOT_QUANTITY = 300;
 const ROBOT_URL = 'https://robohash.org/'
 
 async function getRobotsBoard() {
@@ -9,8 +9,7 @@ async function getRobotsBoard() {
 
 async function _generateRobotsBoard() {
     const robotsBoard = []
-    const randomNum = getRandomInt(0, 300)
-    for (let i = randomNum; i < (ROBOT_QUANTITY + randomNum); i++) {
+    for (let i = 0; i < ROBOT_QUANTITY; i++) {
         const robot = _buildRobotData((i + 1))
         const robotPair = duplicatePairCard(robot)
         robotsBoard.push(robot, robotPair)

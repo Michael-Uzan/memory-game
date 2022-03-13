@@ -1,5 +1,5 @@
 'use strict'
-const POKEMON_QUANTITY = 15;
+const POKEMON_QUANTITY = 100;
 
 async function getPokemonsBoard() {
     const pokemonsBoard = await _generatePokemonsBoard()
@@ -8,8 +8,7 @@ async function getPokemonsBoard() {
 
 async function _generatePokemonsBoard() {
     const pokemonsBoard = []
-    const randomNum = getRandomInt(0, 300)
-    for (let i = randomNum; i < (POKEMON_QUANTITY + randomNum); i++) {
+    for (let i = 0; i < POKEMON_QUANTITY; i++) {
         const pokemon = await _buildPokemonData((i + 1))
         const pokemonPair = duplicatePairCard(pokemon)
         pokemonsBoard.push(pokemon, pokemonPair)
