@@ -19,8 +19,22 @@ async function onInit() {
     startTrail()
 }
 
+function onLoad() {
+    window.addEventListener('offline', onOffline)
+    window.addEventListener('online', onOnline)
+}
+
 function onUnload() {
-    console.log('unload')
+    window.removeEventListener('online', onOnline)
+    window.removeEventListener('offline', onOffline)
+}
+
+function onOnline() {
+    console.log('online')
+}
+
+function onOffline() {
+    console.log('onffline')
 }
 
 function toggleLoading() {
